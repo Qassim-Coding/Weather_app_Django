@@ -1,0 +1,22 @@
+{% if weather_data %}
+  <div class="weather-card">
+    <h1>{{ weather_data.city }}</h1>
+    <h2>{{ weather_data.temperature }}°C</h2>
+    <p>{{ weather_data.description }}</p>
+    <img src="http://openweathermap.org/img/w/{{ weather_data.icon }}.png" alt="{{ weather_data.description }}">
+  </div>
+{% endif %}
+
+{% if daily_forecasts %}
+  <h2>5 day Forecast</h2>
+  <div class="forecast-container">
+    {% for forecast in daily_forecasts %}
+      <div class="forecast-card">
+        <h3>{{ forecast.day }}</h3>
+        <!--<h3>{{ forecast.datetime }}</h3> Affiche la date et l'heure de chaque prévision -->        <p>{{ forecast.temperature }}°C</p>
+        <p>{{ forecast.description }}</p>
+        <img src="http://openweathermap.org/img/w/{{ forecast.icon }}.png" alt="{{ forecast.description }}">
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}

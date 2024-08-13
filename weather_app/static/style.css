@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color:rgb(142, 142, 193);
+  text-align: center;
+  padding: 50px;
+}
+
+form {
+  margin: 20px 0;
+}
+
+
+input[type="text"] {
+  padding: 5px;
+  border: 1px solid #9d8b8b;
+  border-radius: 5px;
+}
+
+button {
+  background-color: rgb(30, 181, 106);
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.forecast-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: centspace-around;
+}
+
+.forecast-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  width: 16%;
+  text-align: center;
+}
+
+.weather-card {
+  border: 2px solid #007bff; /* Changer la bordure pour la différencier */
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: none;
+  background-color: #e9f7ff; /* Couleur de fond légèrement différente */
+  text-align: center;
+}
+
+
+.forecast {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgby(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 10px;
+  width: calc(100% / 5 -20px);
+  box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  .forecast {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .forecast {
+    width: 100%;
+  }
+}
